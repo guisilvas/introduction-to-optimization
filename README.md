@@ -1,4 +1,4 @@
-'# Introduction to Optimization
+# Introduction to Optimization
 
 UFMG DMAT Summer Course 2026 - Applied Mathematics
 
