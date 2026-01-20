@@ -4,8 +4,8 @@
 x1 = 0
 x2 = 0
 
-# Objective function: f(x1,x2)=40*x1+40*x2
-f(x1,x2)=40*x1+40*x2
+# Objective function: f(x1,x2) = 40*x1 + 40*x2
+f(x1,x2) = 40*x1 + 40*x2
 
 # Restrictions: 3*x1+2*x2 <= 1200; x1+2*x2 <= 800; x1 <= 300; x1, x2 >= 0
 
@@ -41,7 +41,7 @@ a + b = 100000000
 	      1000000000 <= 4b
 	      b >= 25000000
 
-	      - Now, we want to minimize b because its signal is negative, so, the smalle b in [25000000, 100000000] = 25000000
+	      - Now, we want to minimize b because its signal is negative, so, the smaller b in range [25000000, 100000000] = 25000000
 	      b = 25000000
 	      a = 100000000 - 25000000 = 75000000
 """
@@ -54,6 +54,11 @@ a + b = 100000000
 x = 0
 y = 0
 
-# Objective function: 
+# Objective function: f(x,y) = 450*x + 1200*y
+f(x,y) = 450*x + 1200*y
 
-# Restrictions: 450*x+1200*y <= ; 30*x + 120*y <= 2400; 24*x + 60*y <= 1380
+# Restrictions: 30*x + 120*y <= 2400; 24*x + 60*y <= 1380; x + y = 40; y <= 20; x, y >= 0
+
+
+
+
