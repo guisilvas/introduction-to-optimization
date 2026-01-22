@@ -17,9 +17,16 @@ tol = input()
 
 # Secant function
 def secant_method(f,a,b,tol):
-    while((x-b)<=tol):
-	x = a-(f(x=a)*(b-a))/(f(x=b)-f(x=a))
-	x1 = f(x=n)
+    while(x-b <= tol):
+	p = a - f(x=a)*(b-a) / f(x=b)-f(x=a)
+	if f(x=a)*f(x=xn) < 0:
+	    return secant_method(f,a,p,tol)
+	elif f(x=b)*f(x=p) < 0:
+	    return secant_method(f,p,b,tol)
+	elif ():
+	    
+	else:
+	    return 0
 
 res = secant_method(f,a,b,tol)
 print(res)
