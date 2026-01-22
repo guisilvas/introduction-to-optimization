@@ -26,11 +26,10 @@ def straight(p1,p2):
 
 # Random points generator
 def set_point(a,b):
-    x, y = sorted([randint(a, b), randint(a, b)])
-    res = vector([x,y])
-    if(x==y):
-        res = set_point(a,b)
-    return res
+    while(1):
+        x, y = sorted([randint(a, b), randint(a, b)])
+        if(x!=y):
+            return vector([x,y])
 
 # Otain the root
 def secant_method(f,a=0,b=5):
