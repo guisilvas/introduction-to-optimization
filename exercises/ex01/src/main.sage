@@ -1,3 +1,5 @@
+import random
+
 # Get limits and tolerance
 print("Enter the lower limit: ")
 a = input()
@@ -23,12 +25,12 @@ def straight(p1,p2):
     m = p2-p1
 
 # Random points generator
-def set-point(a,b):
-    x = uniform(a,b)
-    y = uniform(a,b)
-    if(x>y)
+def set_point(a,b):
+    x = random.randint(a,b)
+    y = random.randint(a,b)
+    if(x>y):
         res = vector([y,x])
-    else
+    else:
         res = vector([x,y])
     return res
 
