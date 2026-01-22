@@ -20,17 +20,29 @@ def plotting_graphic(f,a=0,b=0):
 
 plotting_graphic(f,a,b)
 
+# Intersection of the line and the curve
+def interception(p1,p2):
+    var('x y')
+    if p1[0]==p2[0]:
+	line_eq = x == p1[0]
+    else:
+	m = 
+    return solve([y,x], y,x)
+
 # Straith beetwen two points
 def straight(p1,p2):
+    var('x y')
+    if p1[0]==p2[0]:
+	return x==p1[0]
     m = (p2[1]-p1[1])/(p2[0]-p1[0])
-    b = solve(y=n*x+b, x=p1[0], y=p1[1], n=m)
-    
+    b = p1[1]-m*p1[0]
+    return y==m*x+b
 
 # Random points generator
 def gen_point(a,b):
     while(1):
         x, y = sorted([randint(a, b), randint(a, b)])
-        if(x!=y):
+        if x!=y:
             return vector([x,y])
 
 # Otain the root
