@@ -20,12 +20,14 @@ def plotting_graphic(f,a=0,b=0):
 
 plotting_graphic(f,a,b)
 
-# Obtain the straith beetwen two points
+# Straith beetwen two points
 def straight(p1,p2):
-    m = p2-p1
+    m = (p2[1]-p1[1])/(p2[0]-p1[0])
+    b = solve(y=n*x+b, x=p1[0], y=p1[1], n=m)
+    
 
 # Random points generator
-def set_point(a,b):
+def gen_point(a,b):
     while(1):
         x, y = sorted([randint(a, b), randint(a, b)])
         if(x!=y):
