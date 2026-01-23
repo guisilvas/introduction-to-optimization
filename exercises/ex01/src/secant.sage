@@ -17,7 +17,11 @@ def secant_method(f,x0,x1,tol):
     i = 0
     while 1:
 	i+=1
-	if fnum(x1)*fnum(x0) == 0:
+	if fnum(x0) == 0:
+	    return x0
+	if fnum(x1) == 0:
+	    return x1
+	if fnum(x0) == fnum(x1) == 0:
 	    return None
 	x = x0 - fnum(x0)*(x1-x0)/(fnum(x1)-fnum(x0))
 	x0 = x1
