@@ -35,8 +35,11 @@ def secant_method(f,a,b,tol):
         a = b
         b = c
         j+=_sage_const_1 
-    return res
+    return vector([c, j])
 
-print(secant_method(f,a,b,tol))
-plot(f,(x,-_sage_const_10 ,_sage_const_10 ))
+v = vector(secant_method(f,a,b,tol))
+print("Approximate root: ", v[_sage_const_0 ], "\nIterations: ", v[_sage_const_1 ])
+g = plot(f,(x,-_sage_const_10 ,_sage_const_10 ),title='Function',color='red' + point((_sage_const_0 ,v[_sage_const_0 ]),color='blue'))
+g.save('function.png')
+
 

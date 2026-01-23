@@ -30,7 +30,10 @@ def secant_method(f,a,b,tol):
         a = b
         b = c
         j+=1
-    return res
+    return vector([c, j])
 
-print(secant_method(f,a,b,tol))
-plot(f,(x,-10,10))
+v = vector(secant_method(f,a,b,tol))
+print("Approximate root: ", v[0], "\nIterations: ", v[1])
+g = plot(f,(x,-10,10),title='Function',color='red' + point((0,v[0]),color='blue'))
+g.save('function.png')
+
