@@ -81,12 +81,26 @@ P = P0 + v*x
 
 """
 
-print("Enter the expression: P = P0 + v*x")
-p = list(map(int, input().split()))
-p0 = list(map(int, input().split()))
-v = list(map(int, input().split()))
-x = input()
+print("Enter the expression: P = P0 + v*x\n")
 
+# P
+print("P = ")
+a = input(); b = input()
+p = matrix(RR,[[a],[b]])
+
+# P0
+print("P0 = ")
+a = input(); b = input()
+p0 = matrix(RR,[[a],[b]])
+
+# V
+print("v = ")
+a = input(); b = input()
+v = matrix(RR,[[a],[b]])
+
+# x
+print("x = ")
+x = input()
 
 def unknow(p, p0, v, x):
 	if p == 0:
@@ -96,7 +110,7 @@ def unknow(p, p0, v, x):
 	elif v == 0:
 		print("v = ", (p-p0)/x)
 	else:
-		print("x = ", (p[0]-p0[0])/v)
+		print("x = ", (p-p0)*v^(-1))
 
 unknow(p, p0, v, x)
 
