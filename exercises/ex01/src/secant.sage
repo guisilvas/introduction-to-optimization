@@ -27,7 +27,7 @@ def secant_method(f,x0,x1,tol):
 	    if (fnum(x0) - fnum(x1)) == 0:
 	    	return None
 	    x2 = x1 - fnum(x1)*(x1-x0)/(fnum(x1)-fnum(x0))	
-            x0 = x1
+        x0 = x1
 	    x1 = x2
 	    if abs(x1-x0)<tol:
 	    	break
