@@ -16,18 +16,14 @@ def secant_method(f,x0,x1,tol):
     fnum = f.function(x)
     i = 0
     while 1:
+	i+=1
 	if fnum(x1)*fnum(x0) == 0:
 	    return None
-
-	x = x0 - fnum(x0)*(x1-x0) / fnum(x1)-fnum(x0)
-	
-	if fnum(x0)*fnum(x) < 0:
-	    x1 = x
-	elif fnum(x1)*fnum(x) < 0:
-            x0 = x	    
-	elif x0-x1<= tol:
+	x = x0 - fnum(x0)*(x1-x0)/(fnum(x1)-fnum(x0))
+	x0 = x1
+	x1 = x
+	if abs(x1-x0)<tol:
 	    break
-        i++
     print("Iterations: ", i)
     return x
 
