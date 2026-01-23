@@ -21,18 +21,18 @@ def secant_method(f,x0,x1,tol):
     fnum = f.function(x)
     i = _sage_const_0 
     while _sage_const_1 :
-	i+=_sage_const_1 
-	if fnum(x0) == _sage_const_0 :
-	    return x0
-	if fnum(x1) == _sage_const_0 :
-	    return x1
-	if fnum(x0) - fnum(x1) == _sage_const_0 :
-	    return None
-	x2 = x0 - fnum(x0)*(x1-x0)/(fnum(x1)-fnum(x0))
-	x0 = x1
-	x1 = x2
-	if abs(x1-x0)<tol:
-	    break
+	    i+=_sage_const_1 
+	    if fnum(x0) == _sage_const_0 :
+	    	return x0
+		if fnum(x1) == _sage_const_0 :
+	    	return x1
+		if fnum(x0) - fnum(x1) == _sage_const_0 :
+	    	return None
+		x2 = x0 - fnum(x0)*(x1-x0)/(fnum(x1)-fnum(x0))
+		x0 = x1
+		x1 = x2
+		if abs(x1-x0)<tol:
+	    	break
     print("Iterations: ", i)
     return x2
 
