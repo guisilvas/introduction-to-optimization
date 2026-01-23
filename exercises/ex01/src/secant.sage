@@ -1,5 +1,4 @@
-# Function to be evalueted
-var('x')
+# Symbolic function to be evalueted
 f = x^2+6*x+8
 
 # Get points x0, x1 and tolerance
@@ -14,19 +13,20 @@ i = ZZ(input("Enter the max num of iterations: "))
 
 # Secant function
 def secant_method(f,x0,x1,tol,i):
+    x = var('x')
     fnum = f.function(x)
     j = 0
     while j<i:
         i+=1
-	if fnum(x0) == 0:
-	    return x0
-	if fnum(x1) == 0:
-	    return x1
-	if (fnum(x0) - fnum(x1)) == 0:
-	    return None
-	x2 = x1 - fnum(x1)*(x1-x0)/(fnum(x1)-fnum(x0)); x0 = x1; x1 = x2
-	if abs(x1-x0)<tol:
-	    break
+        if fnum(x0) == 0:
+	          return x0
+	      if fnum(x1) == 0:
+	          return x1
+	      if (fnum(x0) - fnum(x1)) == 0:
+	          return None
+	      x2 = x1 - fnum(x1)*(x1-x0)/(fnum(x1)-fnum(x0)); x0 = x1; x1 = x2
+	      if abs(x1-x0)<tol:
+	          break
     print("Iterations: ", i)
     return x2
 
