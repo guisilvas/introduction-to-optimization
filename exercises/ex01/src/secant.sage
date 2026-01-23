@@ -18,8 +18,8 @@ def secant_method(f,x0,x1,tol):
     while 1:
 	    i+=1
 	    if(i == 10000):
-		print("Iterations limit")
-		break
+		    print("Iterations limit")
+		    break
 	    if fnum(x0) == 0:
 	    	return x0
 	    if fnum(x1) == 0:
