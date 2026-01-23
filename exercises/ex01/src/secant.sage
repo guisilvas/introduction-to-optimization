@@ -21,15 +21,15 @@ def secant_method(f,x0,x1,tol):
 	    return x0
 	if fnum(x1) == 0:
 	    return x1
-	if fnum(x0) == fnum(x1) == 0:
+	if fnum(x0) - fnum(x1) == 0:
 	    return None
-	x = x0 - fnum(x0)*(x1-x0)/(fnum(x1)-fnum(x0))
+	x2 = x0 - fnum(x0)*(x1-x0)/(fnum(x1)-fnum(x0))
 	x0 = x1
-	x1 = x
+	x1 = x2
 	if abs(x1-x0)<tol:
 	    break
     print("Iterations: ", i)
-    return x
+    return x2
 
 res = secant_method(f,a,b,tol)
 print(res)
