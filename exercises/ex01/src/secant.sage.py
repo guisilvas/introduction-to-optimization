@@ -9,7 +9,7 @@ f = x**_sage_const_2 +_sage_const_6 *x+_sage_const_8
 
 # Get points x0, x1 and tolerance
 while _sage_const_1 :
-	a = RR(input("Enter x0: "))
+        a = RR(input("Enter x0: "))
 	b = RR(input("Enter x1: "))
 	if(f(x=a)*f(x=b) < _sage_const_0 ):
 		break
@@ -19,21 +19,21 @@ i = ZZ(input("Enter the max num of iterations: "))
 
 # Secant function
 def secant_method(f,x0,x1,tol,i):
-    fnum = f.function(x)
-    j = _sage_const_0 
-    while j<i:
-        i+=_sage_const_1 
-	if fnum(x0) == _sage_const_0 :
-	    return x0
-	if fnum(x1) == _sage_const_0 :
-	    return x1
-	if (fnum(x0) - fnum(x1)) == _sage_const_0 :
-	    return None
-	x2 = x1 - fnum(x1)*(x1-x0)/(fnum(x1)-fnum(x0)); x0 = x1; x1 = x2
-	if abs(x1-x0)<tol:
-	    break
-    print("Iterations: ", i)
-    return x2
+	fnum = f.function(x)
+	j = _sage_const_0 
+    	while j<i:
+		j+=_sage_const_1 
+		if fnum(x0) == _sage_const_0 :
+	    		return x0
+		if fnum(x1) == _sage_const_0 :
+	    		return x1
+		if (fnum(x0) - fnum(x1)) == _sage_const_0 :
+	    		return None
+		x2 = x1 - fnum(x1)*(x1-x0)/(fnum(x1)-fnum(x0)); x0 = x1; x1 = x2
+		if abs(x1-x0)<tol:
+	    		break
+    	print("Iterations: ", i)
+    	return x2
 
 res = secant_method(f,a,b,tol,i)
 print(res)
