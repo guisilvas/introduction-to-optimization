@@ -32,8 +32,11 @@ Whats SageMath? SageMath is the most advanced free open-source math software.
 - Quit sage ambient: conda deactivate
 - Open graphics(png)*: xdg-open file.png
 
-### Methods
+### Methods to find roots
+
+- [Bisection Method](https://www.youtube.com/watch?v=MlP_W-obuNg)
+- [Newton Method](https://www.youtube.com/watch?v=E24zUEKqgwQ)
+- [Secant Method](https://www.youtube.com/watch?v=_MfjXOLUnyw)
 - Linear Programming: solve linear function. [a1*x1 + a2*x2 + ... + an*xn = s]
-- 
 
 ### Organizer Prof. Dr. [Gustavo B. de Oliveira](http://lattes.cnpq.br/0042143441223891), DMAT, UFMG
