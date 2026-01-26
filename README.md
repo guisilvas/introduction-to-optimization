@@ -32,11 +32,18 @@ Whats SageMath? SageMath is the most advanced free open-source math software.
 - Quit sage ambient: conda deactivate
 - Open graphics(png)*: xdg-open file.png
 
+[Calculus tutorial in SageMath](https://www.sagemath.org/calctut/index.html)
+
 ### Methods to find roots
 
 [Bisection Method](https://www.youtube.com/watch?v=MlP_W-obuNg)
 [Newton Method(video)](https://www.youtube.com/watch?v=E24zUEKqgwQ)
 [Secant Method(video)](https://www.youtube.com/watch?v=_MfjXOLUnyw)
-- [Explanetion](https://byjus.com/maths/secant-method/#definition)
+- [Explanation](https://byjus.com/maths/secant-method/#definition)
+
+### Methods to find minimum and maximum
+
+[Ternary Search](https://www.youtube.com/watch?v=7h86n97naH4)
+[Dichotomous Search](https://www.youtube.com/watch?v=n_zefNBfhSM)
 
 ### Organizer Prof. Dr. [Gustavo B. de Oliveira](http://lattes.cnpq.br/0042143441223891), DMAT, UFMG
