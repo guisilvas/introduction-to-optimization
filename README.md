@@ -34,9 +34,9 @@ Whats SageMath? SageMath is the most advanced free open-source math software.
 
 ### Methods to find roots
 
-- [Bisection Method](https://www.youtube.com/watch?v=MlP_W-obuNg)
-- [Newton Method](https://www.youtube.com/watch?v=E24zUEKqgwQ)
-- [Secant Method](https://www.youtube.com/watch?v=_MfjXOLUnyw)
-- Linear Programming: solve linear function. [a1*x1 + a2*x2 + ... + an*xn = s]
+[Bisection Method](https://www.youtube.com/watch?v=MlP_W-obuNg)
+[Newton Method(video)](https://www.youtube.com/watch?v=E24zUEKqgwQ)
+[Secant Method(video)](https://www.youtube.com/watch?v=_MfjXOLUnyw)
+- [Explanetion](https://byjus.com/maths/secant-method/#definition)
 
 ### Organizer Prof. Dr. [Gustavo B. de Oliveira](http://lattes.cnpq.br/0042143441223891), DMAT, UFMG
