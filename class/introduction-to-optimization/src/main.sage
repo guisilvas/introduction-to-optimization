@@ -1,15 +1,33 @@
 # Exemple 1
 
 # Variables: x1 = dog food; x2 = cat food
-x1 = 0
-x2 = 0
+print("Exemple 1")
+x1 = x2 = 0
+print("Dog food x1 = ",x1,"\nCat food x2 = ",x2)
 
 # Objective function: f(x1,x2) = 40*x1 + 40*x2
 f(x1,x2) = 40*x1 + 40*x2
+print("Objective function: f(x) =  ",f(x1,x2))
 
 # Restrictions: 3*x1+2*x2 <= 1200; x1+2*x2 <= 800; x1 <= 300; x1, x2 >= 0
 
-# ---
+# Exercise 1
+
+maximized = ['call minutes per month','amount of data per mounth','phone storage amount']
+minimized = ['plan cost per month','phone cost','energy consumption']
+cannotOptmize = ['disponible brands and models','have 4G signal']
+print("Exercise 1")
+print("\nMaximized: ")
+for i in range (0,len(maximized)):
+    print(maximized[i])
+
+print("\nMinimized:")
+for i in range (0,len(minimized)):
+    print(minimized[i])
+
+print("\nCannot optimize:")
+for i in range (0,len(cannotOptmize)):
+    print(cannotOptmize[i])
 
 # Exercise 4
 
@@ -21,7 +39,7 @@ b = 0
 f(a,b) = 0.1*a + 0.05*b
 
 # Restrictions: a+b=1000000000; a <= 3b; a, b >= 0
-a + b = 100000000
+c = a + b
 
 """ Solution: As a linear function we can use a system of 2 variables
 
