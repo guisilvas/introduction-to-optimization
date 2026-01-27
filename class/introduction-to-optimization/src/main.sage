@@ -1,23 +1,23 @@
 # Exemple 1
-
-# Variables: x1 = dog food; x2 = cat food
 print("Exemple 1")
+
 x1 = x2 = 0
-print("Dog food x1 = ",x1,"\nCat food x2 = ",x2)
+print("Variables:\nDog food x1 = ",x1,"\nCat food x2 = ",x2)
 
-# Objective function: f(x1,x2) = 40*x1 + 40*x2
 f(x1,x2) = 40*x1 + 40*x2
-print("Objective function: f(x) =  ",f(x1,x2))
+print("\nObjective function:\nf(x) = ",f(x1,x2))
 
-# Restrictions: 3*x1+2*x2 <= 1200; x1+2*x2 <= 800; x1 <= 300; x1, x2 >= 0
+print("\nRestrictions:\n3*x1+2*x2 <= 1200\nx1+2*x2 <= 800\nx1 <= 300\nx1, x2 >= 0")
+
+print("\n---\n")
 
 # Exercise 1
-
 maximized = ['call minutes per month','amount of data per mounth','phone storage amount']
 minimized = ['plan cost per month','phone cost','energy consumption']
 cannotOptmize = ['disponible brands and models','have 4G signal']
+
 print("Exercise 1")
-print("\nMaximized: ")
+print("Maximized: ")
 for i in range (0,len(maximized)):
     print(maximized[i])
 
@@ -29,17 +29,48 @@ print("\nCannot optimize:")
 for i in range (0,len(cannotOptmize)):
     print(cannotOptmize[i])
 
-# Exercise 4
+print("\n---\n")
 
-# Variables: a = option A; b = option B
+# Exercise 2
+print("\nExercise 2 \nMaximize fuel consumption")
+notVariable = ['ease of use','type of propulsion']
+link = ['velocity >= 300m/s','reach >= 2000km','noise <= 200dB','weight <= 2000kg','cost <= 20,000,000USD','load capacity >= 2,000kg']
+
+print("\nNot variable:")
+for i in range (0,len(notVariable)):
+    print(notVariable[i])
+
+print("\nLinks:")
+for i in range (1,len(link)):
+    print(link[i])
+
+print("\n---\n")
+
+# Exercise 3
+print("Exercise 3")
+
+print("(a) Maximize grade")
+print("Links:\ndispend time <= 3h\nmaterial cost <= 20USD")
+
+print("\n(b) Minimize delivery time")
+print("Links:\nfuel usage <= 1 tank\nroute taken <= 50km")
+
+print("\n(c) Minimize usage space")
+print("Links:\nproduct units >= 0\nspace usage >= 2m^2")
+
+print("\n---\n")
+
+# Exercise 4
+print("Exercise 4")
+
 a = 0
 b = 0
+print("\nVariables:\na(option A) = ", a, "\nb(option B) = ", b)
 
-# Objective function: f(a, b) = 0.1*a + 0.05*b
 f(a,b) = 0.1*a + 0.05*b
+print("\nObjective function:\nf(a,b) = ", f(a,b))
 
-# Restrictions: a+b=1000000000; a <= 3b; a, b >= 0
-c = a + b
+print("\nRestrictions:\na+b=1000000000\na <= 3b\na, b >= 0")
 
 """ Solution: As a linear function we can use a system of 2 variables
 
@@ -64,19 +95,19 @@ c = a + b
 	      a = 100000000 - 25000000 = 75000000
 """
 
-# ---
+print("\n---\n")
 
 # Exercise 5
+print("Exercise 5")
 
-# Variables: x = bean; y = rice
 x = 0
 y = 0
+print("\nVariables:\nx(bean) = ", x, "\ny(rice) = ", y)
 
-# Objective function: f(x,y) = 450*x + 1200*y
 f(x,y) = 450*x + 1200*y
+print("\nObjective function:\nf(x) = ",f(x,y))
 
-# Restrictions: 30*x + 120*y <= 2400; 24*x + 60*y <= 1380; x + y <= 40; y <= 20; x, y >= 0
-
+print("\nRestrictions:\n30*x + 120*y <= 2400\n24*x + 60*y <= 1380\nx + y <= 40\ny <= 20\nx, y >= 0")
 
 """ Solution:
 	Objective function: P = 450*x+1200*y
@@ -102,6 +133,5 @@ f(x,y) = 450*x + 1200*y
 	f(9.473684211,17.631578947)=450*9.473684211+1200*17.631578947=4263.15789495+21157.8947367=25421.05263165
 
 	- Max profit: 25421.05263165
-
 """
 
