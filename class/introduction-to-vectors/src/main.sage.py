@@ -13,7 +13,7 @@ As a point, a column matrix and as a line matrix
 from sage.all_cmdline import *   # import sage library
 
 _sage_const_3 = Integer(3); _sage_const_4 = Integer(4); _sage_const_5 = Integer(5); _sage_const_2 = Integer(2); _sage_const_8 = Integer(8); _sage_const_6p1 = RealNumber('6.1'); _sage_const_2p7 = RealNumber('2.7'); _sage_const_0 = Integer(0); _sage_const_1p2 = RealNumber('1.2'); _sage_const_4p9 = RealNumber('4.9'); _sage_const_12p2 = RealNumber('12.2'); _sage_const_1 = Integer(1)# (a) 3, 4
-a = vector(QQ, [_sage_const_3 , _sage_const_4 ])
+a = point((_sage_const_3 ,_sage_const_4 ))
 aa = matrix([[_sage_const_3 ],[_sage_const_4 ]])
 aaa = aa.transpose()
 
@@ -24,7 +24,7 @@ print("A^t = ", aaa)
 print("\n")
 
 # (b) 5, -2, 8
-b = vector(QQ, [_sage_const_5 , -_sage_const_2 , _sage_const_8 ])
+b = point((_sage_const_5 , -_sage_const_2 , _sage_const_8 ))
 bb = matrix([[_sage_const_5 ], [-_sage_const_2 ], [_sage_const_8 ]])
 bbb = bb.transpose()
 
@@ -34,7 +34,7 @@ print("B^t = ", bbb)
 print("\n")
 
 # (c) 6.1, 2.7, 0, 1.2, -4.9, 12.2
-c = vector(QQ, [_sage_const_6p1 , _sage_const_2p7 , _sage_const_0 , _sage_const_1p2 , -_sage_const_4p9 , _sage_const_12p2 ])
+c = point((_sage_const_6p1 , _sage_const_2p7 , _sage_const_0 , _sage_const_1p2 , -_sage_const_4p9 , _sage_const_12p2 ))
 cc = matrix([[_sage_const_6p1 ], [_sage_const_2p7 ], [_sage_const_0 ], [_sage_const_1p2 ], [-_sage_const_4p9 ], [_sage_const_12p2 ]])
 ccc = cc.transpose()
 
@@ -42,6 +42,7 @@ print("C = ", c)
 print(cc, " = C")
 print("C = ", ccc)
 print("\n")
+
 
 """ Exercise 2
 
@@ -91,23 +92,23 @@ print("Enter the expression: P = P0 + v*x\n")
 # P
 print("P = ")
 a = input(); b = input()
-p = matrix(RR,[[a],[b]])
+p = vector([a,b])
 
 # P0
 print("P0 = ")
 a = input(); b = input()
-p0 = matrix(RR,[[a],[b]])
+p0 = vector([a,b])
 
 # V
 print("v = ")
 a = input(); b = input()
-v = matrix(RR,[[a],[b]])
+v = vector([a,b])
 
 # x
 print("x = ")
 x = input()
 
-def unknow(p=_sage_const_0 , p0=_sage_const_0 , v=_sage_const_0 , x=_sage_const_0 ):
+def unknow(p, p0, v, x):
 	if p == _sage_const_0 :
 		print("P = ", p0+v*x)
 	elif p0 == _sage_const_0 :
