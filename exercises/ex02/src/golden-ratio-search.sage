@@ -1,7 +1,7 @@
 """
 Name: Guilherme Soares Silva
 Reg. Code: 2025119440
-Algorithm: Ternary Search by Golden Ration section
+Algorithm: Golden Section Search
 """
 
 var('x')
@@ -9,11 +9,12 @@ f(x) = 3*x^2+2*x-7
 a = RR(input("Enter the lower limit: "))
 b = RR(input("Enter the upper limit: "))
 
-# Ternary Search Method by Golden Ration section (minimum)
+# Golden Section Search (minimum)
 def ternary_search(f,a,b):
-    i = 0.0001
+    i = RR(1e-4)
+    phi = RR((sqrt(5)-1)/2)
     while abs(b-a) > i:
-        c = (2*a-b)*0.382; d = (a-2*b)*0.618
+        c = b-phi*(b-a); d = a+phi*(b-a)
         if f(x=c) > f(x=d):
             a = c
         else:
