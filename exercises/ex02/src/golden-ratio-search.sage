@@ -11,7 +11,6 @@ b = RR(input("Enter the upper limit: "))
 # Ternary Search Method by Golden Ration section (minimum)
 def ternary_search(f,a,b):
     i = 0.0001
-    phi = lam + alfa
     while abs(a-b) > i:
         a = (2*a-b)*0.382; b = (a-2*b)*0.618
         if f(c) > f(d):
