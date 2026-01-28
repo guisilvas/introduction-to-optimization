@@ -1,6 +1,7 @@
-# Get function, lower and upper delimiters
 var('x')
-f(x) = input("Enter the function: ")
+f(x) = x^3-6*x^2+x-2 # Test function
+
+# Get lower and upper delimiters
 a = RR(input("Enter the lower limit: "))
 b = RR(input("Enter the upper limit: "))
 
@@ -9,13 +10,16 @@ b = RR(input("Enter the upper limit: "))
 
 # Ternary search implemantation (minimum)
 def ternary_search(f,a,b):
-    c = (2*a+b)/3; d = (a+2*b)/3; i = 0.0001
+    i = 0.0001
     while abs(b-a) > i:
+        c = (2*a+b)*RR(0.382); d = (a+2*b)*RR(0.618)
         if f(x=c) < f(x=d):
             b = d
         else:
             a = c
-    return a if a < b else b
+    if a<b:
+        return a, f(x=a)
+    else:
+        return b, f(x=b)
 
-res = ternary_search(f,a,b)
-print("Minimum of ",f," is ",res)
+print("Minimum of ",f," is ",ternary_search(f,a,b))
