@@ -2,7 +2,7 @@
 print("Exemple 1")
 
 x1 = x2 = 0
-print("Variables:\nDog food x1 = ",x1,"\nCat food x2 = ",x2)
+print("Variables:\nDog food -> x1 = ",x1,"\nCat food -> x2 = ",x2)
 
 f(x1,x2) = 40*x1 + 40*x2
 print("\nObjective function:\nf(x) = ",f(x1,x2))
@@ -12,7 +12,7 @@ print("\nRestrictions:\n3*x1+2*x2 <= 1200\nx1+2*x2 <= 800\nx1 <= 300\nx1, x2 >= 
 print("\n---\n")
 
 # Exercise 1
-maximized = ['call minutes per month','amount of data per mounth','phone storage amount']
+maximized = ['call minutes per month','amount of data per month','phone storage amount','internet velocity']
 minimized = ['plan cost per month','phone cost','energy consumption']
 cannotOptmize = ['disponible brands and models','have 4G signal']
 
@@ -32,7 +32,7 @@ for i in range (0,len(cannotOptmize)):
 print("\n---\n")
 
 # Exercise 2
-print("\nExercise 2 \nMaximize fuel consumption")
+print("\nExercise 2 \nMinimize fuel consumption")
 notVariable = ['ease of use','type of propulsion']
 link = ['velocity >= 300m/s','reach >= 2000km','noise <= 200dB','weight <= 2000kg','cost <= 20,000,000USD','load capacity >= 2,000kg']
 
@@ -63,14 +63,13 @@ print("\n---\n")
 # Exercise 4
 print("Exercise 4")
 
-a = 0
-b = 0
-print("\nVariables:\na(option A) = ", a, "\nb(option B) = ", b)
+a = b = 0
+print("\nVariables:\na(option A) =", a, "\nb(option B) =", b)
 
 f(a,b) = 0.1*a + 0.05*b
-print("\nObjective function:\nf(a,b) = ", f(a,b))
+print("\nObjective function:\nf(a,b) =", f(a,b))
 
-print("\nRestrictions:\na+b=1000000000\na <= 3b\na, b >= 0")
+print("\nRestrictions:\na + b = 1000000000\na <= 3b\na, b >= 0")
 
 """ Solution: As a linear function we can use a system of 2 variables
 
@@ -100,12 +99,11 @@ print("\n---\n")
 # Exercise 5
 print("Exercise 5")
 
-x = 0
-y = 0
-print("\nVariables:\nx(bean) = ", x, "\ny(rice) = ", y)
+x = y = 0
+print("\nVariables:\nbean -> x =", x, "\nrice -> y =", y)
 
 f(x,y) = 450*x + 1200*y
-print("\nObjective function:\nf(x) = ",f(x,y))
+print("\nObjective function:\nf(x) =",f(x,y))
 
 print("\nRestrictions:\n30*x + 120*y <= 2400\n24*x + 60*y <= 1380\nx + y <= 40\ny <= 20\nx, y >= 0")
 
