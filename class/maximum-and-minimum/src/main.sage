@@ -19,4 +19,4 @@ f(x) = x^2+2*x
 a = int(input("Enter the lower limit: "))
 b = int(input("Enter the upper limit: "))
 
-print("Min and max: ",closed_interval(f,a,b))
+print("Function: ",f,"\nMin and Max: ",closed_interval(f,a,b))

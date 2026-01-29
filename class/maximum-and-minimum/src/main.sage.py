@@ -6,11 +6,11 @@ from sage.all_cmdline import *   # import sage library
 _sage_const_0 = Integer(0); _sage_const_0p1 = RealNumber('0.1'); _sage_const_2 = Integer(2)# Closed Interval Method
 def closed_interval(f,a,b):
     f1 = derivative(f)
-    max = min = a
+    max = min = f(a)
     while a <= b:
         if f1(a) == _sage_const_0 :
             if f(a) > max:
-                max = a
+                max = f(a)
             if f(a) < min:
                 min = a
         a += _sage_const_0p1 
@@ -24,5 +24,5 @@ __tmp__=var("x"); f = symbolic_expression(x**_sage_const_2 +_sage_const_2 *x).fu
 a = int(input("Enter the lower limit: "))
 b = int(input("Enter the upper limit: "))
 
-print("Min and max: ",closed_interval(f,a,b))
+print("Function: ",f,"\nMin and Max: ",closed_interval(f,a,b))
 
