@@ -5,7 +5,7 @@ Exercise 1
 (b) 5, -2, 8
 (c) 6.1, 2.7, 0, 1.2, -4.9, 12.2
 
-As a point, a column matrix and as a line matrix
+As a point, a column matrix and a line matrix
 """
 
 # (a) 3, 4
@@ -113,11 +113,13 @@ def unknow(p, p0, v, x):
 	elif p0 == 0:
 		print("P0 = ", p-v*x)
 	elif v == 0:
-		print("v = ", (p-p0)/x)
+		print("v = ", (p[0]-p0[0])/x)
 	else:
 		print("x = ", (p-p0)*v^(-1))
 
 unknow(p, p0, v, x)
+
+# ---
 
 """ 
 Exercise 3
@@ -128,10 +130,20 @@ Why (5,1) = (3,6) + [2,4]*x is impossible?
 x = (2,-5)/[2,4]
 x = (1,-1.25)
 
+x cannot have different x and y values.
 """
+
+# ---
 
 """
 Exercise 4
 
+(5,-1) = (6,-3) + [x1,x2]
+(-1,2) = [x1,x2]
 
+(-1/3,2/3) New displacement
+
+(6,-3) + (-1/3,2/3) = (17/3,-7/3)
 """
+
+print("Exercise 4\nNew position: (17/3,-7,3)")
