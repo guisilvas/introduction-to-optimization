@@ -2,8 +2,8 @@ print("Exercise 1")
 # Prime verification by iteration
 def prime(x):
     res = 'Prime'
-    for i in range(2,x+1):
-        if x%i == 0 and x!=i:
+    for i in range(2,x):
+        if x%i == 0:
             res = 'Not prime'
     return res
 
