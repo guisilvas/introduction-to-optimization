@@ -90,32 +90,32 @@ print("Enter the expression: P = P0 + v*x\n")
 
 # P
 print("P = ")
-a = RR(input()); b = RR(input())
-p = vector(RR, [a, b])
+a = input(); b = input()
+p = vector([a, b])
 
 # P0
 print("P0 = ")
-a = RR(input()); b = RR(input())
-p0 = vector(RR, [a, b])
+a = input(); b = input()
+p0 = vector([a, b])
 
 # V
 print("v = ")
-a = RR(input()); b = RR(input())
-v = vector(RR, [a, b])
+a = input(); b = input()
+v = vector([a, b])
 
 # x
 print("x = ")
 x = RR(input())
 
 def unknow(p, p0, v, x):
-    if p == 0:
-        res = RR(p0+v*x)
-    elif p0 == 0:
-        res = RR(p-v*x)
-    elif v == 0:
-        res = RR((p-p0)/x)
+    if p == vector(RR, [0,0]):
+        res = RR(p0 + x*v)
+    elif p0 == vector(RR, [0,0]):
+        res = RR(p - x*v)
+    elif v == vector(RR, [0,0]):
+        res = RR((p - p0)/x)
     else:
-        res = RR((p-p0)/v)
+        res = RR((p - p0)/x)
     return res
 
 unknow(p, p0, v, x)
