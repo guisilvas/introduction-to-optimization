@@ -37,7 +37,10 @@ Whats SageMath? SageMath is the most advanced free open-source math software.
 ### Methods to find roots
 
 [Bisection Method](https://www.youtube.com/watch?v=MlP_W-obuNg)
+- [Intermediate Value Introduction](https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new/ab-1-16/v/intermediate-value-theorem)
+
 [Newton Method(video)](https://www.youtube.com/watch?v=E24zUEKqgwQ)
+
 [Secant Method(video)](https://www.youtube.com/watch?v=_MfjXOLUnyw)
 - [Explanation](https://byjus.com/maths/secant-method/#definition)
 
