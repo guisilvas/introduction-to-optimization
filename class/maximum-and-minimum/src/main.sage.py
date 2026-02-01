@@ -10,14 +10,10 @@ def closed_interval(f,a,b):
     while a <= b:
         if f1(a) == _sage_const_0 :
             if f(a) > max:
-                max = f(a)
+                max = a
             if f(a) < min:
                 min = a
         a += _sage_const_0p1 
-    if f(b) > max:
-        max = b
-    if f(b) < min:
-        min = b
     return vector([min,f(min),max,f(max)])
 
 __tmp__=var("x"); f = symbolic_expression(x**_sage_const_2 +_sage_const_2 *x).function(x)

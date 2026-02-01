@@ -5,14 +5,10 @@ def closed_interval(f,a,b):
     while a <= b:
         if f1(a) == 0:
             if f(a) > max:
-                max = f(a)
+                max = a
             if f(a) < min:
                 min = a
         a += 0.1
-    if f(b) > max:
-        max = b
-    if f(b) < min:
-        min = b
     return vector([min,f(min),max,f(max)])
 
 f(x) = x^2+2*x
