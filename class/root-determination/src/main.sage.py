@@ -11,18 +11,16 @@ __tmp__=var("x"); f = symbolic_expression(_sage_const_3 *x**_sage_const_2 -_sage
 def bisection_method(f,a,b):
     p = a
     tol = _sage_const_0 
-    while true:
-        p = (a + b)/_sage_const_2 
-        if tol == exp(_sage_const_10 ):
-            print("Iteration limit.")
-            return None
-        elif f(x=p) == _sage_const_0 :
-            return p,f(x=p)
-        elif p*f(x=a) > _sage_const_0 :
+    p = (a + b)/_sage_const_2 
+    while (f(x=p) != _sage_const_0 ) or (tol < exp(_sage_const_10 )):
+        if p*f(x=a) > _sage_const_0 :
             a = p 
         else:
             b = p
+         
+        p = (a + b)/_sage_const_2 
         tol = tol+_sage_const_1 
+    return vector(RR,[p,f(x=p)])
 
 a = RR(input("Enter the lower limit: "))
 b = RR(input("Enter the upper limit:  "))
