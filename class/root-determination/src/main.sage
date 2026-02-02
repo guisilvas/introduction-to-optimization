@@ -7,20 +7,19 @@ def calc_f(x):
 
 # Bisection Technique(binary-search)
 def bisection_method(a,b):
-    tol = 10^-4
     i = 0
     c = (a + b)/2
-    while (abs(calc_f(c)) < tol) or (i < 1000):
+    while (abs(calc_f(c)) >= 1e-4) or (i < 100):
         if calc_f(a)*calc_f(c) > 0:
             a = c
         else:
             b = c
         c = (a + b)/2
-        i = i+1
+        i += 1
     return vector(RR,[c,calc_f(c)])
 
 a = RR(input("Enter the lower limit: "))
-b = RR(input("Enter the upper limit:  "))
+b = RR(input("Enter the upper limit: "))
 
 res = bisection_method(a,b)
 print("Root on interval [",a,",",b,"] ->",res)
