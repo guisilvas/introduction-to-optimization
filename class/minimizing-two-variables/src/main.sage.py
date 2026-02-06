@@ -9,30 +9,25 @@ def f(x,y):
 
 # Exercise 1
 def pattern_search(x=_sage_const_0 ,y=_sage_const_0 ):
-    h = _sage_const_1en5 ; i = _sage_const_1en8 ; r = _sage_const_0 ; tol = _sage_const_10e3 
-    #search on x1
-    while f(x-h,y) < f(x,y):
-        x -= h; h -= i; i /= _sage_const_10 
-        if r > tol: 
-            print("Iteration limit reached.")
-            break
-    while f(x+h,y) < f(x,y):
-        x += h; h += i; i /= _sage_const_10 
-        if r > tol: 
-            print("Iteration limit reached.")
-            break  
-    #search on x2
-    while f(x,y-h) < f(x,y):
-        y -= h; h -= i; i /= _sage_const_10 
-        if r > tol: 
-            print("Iteration limit reached.")
-            break
-    while f(x,y+h) < f(x,y):
-        y += h; h += i; i /= _sage_const_10 
-        if r > tol: 
-            print("Iteration limit reached.")
-            break 
-    return vector(RR,[x,y,f(x,y)])
+    h = _sage_const_1en5 ; i = _sage_const_1en8 ; r = _sage_const_0 ; tol = _sage_const_10e3 ; a = x; b = y
+    while x != _sage_const_0  and y != _sage_const_0 :
+        if r > tol:
+            print("Iterations limit reachead.")   
+        #search on x1
+        while f(a - h,b) < f(a,b):
+            a -= h; h -= i; i /= _sage_const_10 
+        while f(a + h,b) < f(a,b):
+            a += h; h += i; i /= _sage_const_10 
+        #search on x2
+        while f(a,b - h) < f(a,b):
+            b -= h; h -= i; i /= _sage_const_10 
+        while f(a,b + h) < f(a,b):
+            b += h;h += i;i /= _sage_const_10 
+        #search on vector direction
+        while f(a + (a - x),b + (b - y)) < f(a,b):
+            a += a - x;b += b - y;i /= _sage_const_10 ;
+        r += _sage_const_1 
+    return vector(RR,[a,b,f(a,b)])
 
     """
     while true:
@@ -44,7 +39,16 @@ def pattern_search(x=_sage_const_0 ,y=_sage_const_0 ):
             return vector(RR,[x,f(x,y)])
     """
 
-x = RR(input("Enter x value: "))
-y = RR(input("Enter y value: "))
-print("Function: f(x,y) = (x-3)^2+(y+1)^2\nApproximated Minimum: ",pattern_search(x,y))
+#x = RR(input("Enter x value: "))
+#y = RR(input("Enter y value: "))
+#print("Function: f(x,y) = (x-3)^2+(y+1)^2\nApproximated Minimum: ",pattern_search(x,y))
+
+# Plotting graphics
+a, b = var('x y')
+__tmp__=var("x,y"); f = symbolic_expression(x**_sage_const_2 +y**_sage_const_2 ).function(x,y)
+p = plot3d(f(x,y), (x,-_sage_const_1 ,_sage_const_1 ),(y,-_sage_const_1 ,_sage_const_1 ),adaptive=True)
+c = contour_plot(f(x,y),(x,-_sage_const_1 ,_sage_const_1 ),(y,-_sage_const_1 ,_sage_const_1 ),labels=True,label_colors='red')
+p.save('graph.png')
+c.save('contour.png')
+
 

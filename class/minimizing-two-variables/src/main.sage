@@ -33,6 +33,15 @@ def pattern_search(x=0,y=0):
             return vector(RR,[x,f(x,y)])
     """
 
-x = RR(input("Enter x value: "))
-y = RR(input("Enter y value: "))
-print("Function: f(x,y) = (x-3)^2+(y+1)^2\nApproximated Minimum: ",pattern_search(x,y))
+#x = RR(input("Enter x value: "))
+#y = RR(input("Enter y value: "))
+#print("Function: f(x,y) = (x-3)^2+(y+1)^2\nApproximated Minimum: ",pattern_search(x,y))
+
+# Plotting graphics
+a, b = var('x y')
+f(x,y) = x^2+y^2
+p = plot3d(f(x,y), (x,-1,1),(y,-1,1),adaptive=True)
+c = contour_plot(f(x,y),(x,-1,1),(y,-1,1),labels=True,label_colors='red')
+p.save('graph.png')
+c.save('contour.png')
+
