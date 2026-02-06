@@ -3,30 +3,25 @@ def f(x,y):
 
 # Exercise 1
 def pattern_search(x=0,y=0):
-    h = 1e-5; i = 1e-8; r = 0; tol = 10e3
-    #search on x1
-    while f(x-h,y) < f(x,y):
-        x -= h; h -= i; i -= i
-        if r > tol: 
-            print("Iteration limit reached.")
-            break
-    while f(x+h,y) < f(x,y):
-        x += h; h += i; i -= i
-        if r > tol: 
-            print("Iteration limit reached.")
-            break  
-    #search on x2
-    while f(x,y-h) < f(x,y):
-        y -= h; h -= i; i -= i
-        if r > tol: 
-            print("Iteration limit reached.")
-            break
-    while f(x,y+h) < f(x,y):
-        y += h; h += i; i -= i
-        if r > tol: 
-            print("Iteration limit reached.")
-            break 
-    return vector(RR,[x,y,f(x,y)])
+    h = 1e-5; i = 1e-8; r = 0; tol = 10e3; a = x; b = y
+    while x != 0 and y != 0:
+        if r > tol:
+            print("Iterations limit reachead.")   
+        #search on x1
+        while f(a - h,b) < f(a,b):
+            a -= h; h -= i; i /= 10
+        while f(a + h,b) < f(a,b):
+            a += h; h += i; i /= 10
+        #search on x2
+        while f(a,b - h) < f(a,b):
+            b -= h; h -= i; i /= 10
+        while f(a,b + h) < f(a,b):
+            b += h;h += i;i /= 10
+        #search on vector direction
+        while f(a + (a - x),b + (b - y)) < f(a,b):
+            a += a - x;b += b - y;i /= 10;
+        r += 1
+    return vector(RR,[a,b,f(a,b)])
 
     """
     while true:
