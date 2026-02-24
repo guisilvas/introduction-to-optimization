@@ -1,9 +1,9 @@
 # Introduction to Optimization
 
-UFMG DMAT Summer Course 2026 - Applied Mathematics
+[UFMG DMAT Summer Course 2026 - Applied Mathematics](https://tinyurl.com/otimizacao-2026)
 
 What is Optimization?
-Optimization has its root in optimum. To optimize means to make something the best it can be.
+Optimization has it's root in optimum. To optimize means to make something the best it can be.
 
 Optimization Vocabulary:
 - Objective Function: quantity to be maximized or minimized.
